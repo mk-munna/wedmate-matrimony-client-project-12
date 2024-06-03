@@ -1,0 +1,62 @@
+.moving-up {
+    position: relative;
+    animation: movingUpdown 1.5s ease-in-out infinite;
+}
+
+
+@keyframes movingUpdown {
+    0% {
+        top: 4px;
+    }
+    
+    50% {
+        top: -4px;
+    }
+    
+    100% {
+        top: 4px;
+    }
+}
+
+.movingLeftRight {
+    position: absolute;
+    will-change: top, left;
+    /* Ensure it is positioned absolutely to use left and top */
+    animation: movingLeftRight 20s linear infinite;
+}
+
+@keyframes movingLeftRight {
+    0% {
+        left: -50;
+        top: 0;
+        /* Start at the original top position */
+    }
+
+    25% {
+        left: -60px;
+        /* Move right more */
+        top: -10px;
+        /* Move up */
+    }
+
+    50% {
+        left: -80px;
+        /* Move left more */
+        top: -30px;
+        /* Move up more */
+    }
+
+    75% {
+        left: -60px;
+        /* Move back to center */
+        top: -10px;
+        /* Move down a bit */
+    }
+
+    100% {
+        left: -50px;
+        /* Back to starting position */
+        top: 0;
+        /* Back to starting position */
+    }
+}
