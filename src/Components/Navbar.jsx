@@ -124,7 +124,7 @@ const Navbar = () => {
                 </div>
 
                 <div className="relative flex-grow">
-                    <header className={`bg-white dark:bg-[#1b3c44] text-heading dark:text-heading2 lg:absolute -top-[200px] ${hidden? '' : '-top-[15px]'} left-1 right-1 lg:w-[1120px]  z-10  mx-auto -mt-4 transition-all duration-[0.5s] `}>
+                    <header className={`bg-white dark:bg-[#1b3c44] text-heading dark:text-heading2 lg:absolute -top-[200px] ${hidden? '' : '-top-[14px]'} left-1 right-1 lg:w-[1120px]  z-10  mx-auto -mt-4 transition-all duration-[0.5s] `}>
                         <div className="px-4 mx-auto sm:px-6 lg:px-8">
                             <div className="flex items-center justify-between h-16 lg:h-20">
                                 <div className="flex-shrink-0">

@@ -50,6 +50,13 @@ const Banner = () => {
                                 className='absolute'>
                                 <img className='w-[150px]' src="https://templates.hibotheme.com/wazo/default/assets/img/hero/hero-shape-2.png" alt="" />
                             </motion.div>
+                            <motion.div
+                                initial={{ opacity: 1, y: 350, x: -100 }}
+                                animate={{ opacity: 1, y: 280, x: -70 }}
+                                transition={{ duration: 10, repeat: Infinity, repeatType: 'reverse' }}
+                                className='absolute'>
+                                <img className='w-[150px]' src="https://templates.hibotheme.com/wazo/default/assets/img/hero/hero-shape-6.png" alt="" />
+                            </motion.div>
                             <img className='absolute  opacity-10 bottom-[40px]  md:right-[150px] lg:right-0' src="https://i.ibb.co/B2QCbxh/hero-shape-1.png" alt="" />
                             <div className='z-[1]'>
                                 <img className=' lg:w-[250px] ' src="https://i.ibb.co/M5PgnYc/hero-img-1.png" alt="Hero 1" />
