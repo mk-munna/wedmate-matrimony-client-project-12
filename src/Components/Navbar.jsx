@@ -54,7 +54,7 @@ const Navbar = () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, [lastScrollTop, isOpen]);
-    console.log({ hidden });
+    // console.log({ hidden });
     // console.log({ showNavbar });
     const handleClick = () => {
         signOut(auth)
