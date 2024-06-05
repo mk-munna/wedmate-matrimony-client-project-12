@@ -1,8 +1,8 @@
 [
     {
         "bioData_id": 1,
-        "biodata_type": "Male",
-        "name": "John Doe",
+        "bioData_type": "Female",
+        "name": "Jenny Zara",
         "profile_image": "https://rn53themes.net/themes/matrimo/images/profiles/4.jpg",
         "date_of_birth": "1990-05-15",
         "height": "180 cm",
@@ -23,7 +23,7 @@
     },
     {
         "bioData_id": 2,
-        "biodata_type": "Female",
+        "bioData_type": "Female",
         "name": "Jane Smith",
         "profile_image": "https://rn53themes.net/themes/matrimo/images/profiles/3.jpg",
         "date_of_birth": "1992-08-20",
@@ -45,7 +45,7 @@
     },
     {
         "bioData_id": 3,
-        "biodata_type": "Female",
+        "bioData_type": "Female",
         "name": "Alice Johnson",
         "profile_image": "https://rn53themes.net/themes/matrimo/images/profiles/1.jpg",
         "date_of_birth": "1990-05-15",
@@ -67,7 +67,7 @@
     },
     {
         "bioData_id": 4,
-        "biodata_type": "Female",
+        "bioData_type": "Female",
         "name": "Emily Davis",
         "profile_image": "https://rn53themes.net/themes/matrimo/images/profiles/6.jpg",
         "date_of_birth": "1995-03-22",
@@ -89,7 +89,7 @@
     },
     {
         "bioData_id": 5,
-        "biodata_type": "Female",
+        "bioData_type": "Female",
         "name": "Sophia Brown",
         "profile_image": "https://rn53themes.net/themes/matrimo/images/profiles/14.jpg",
         "date_of_birth": "1988-07-10",
@@ -111,7 +111,7 @@
     },
     {
         "bioData_id": 6,
-        "biodata_type": "Female",
+        "bioData_type": "Female",
         "name": "Olivia Martinez",
         "profile_image": "https://rn53themes.net/themes/matrimo/images/profiles/2.jpg",
         "date_of_birth": "1991-11-30",
