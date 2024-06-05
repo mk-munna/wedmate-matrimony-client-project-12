@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 const Banner = () => {
     return (
-        <div className="bg-[#ECF0F2] dark:bg-dark">
+        <div className="bg-[#ECF0F2] dark:bg-[#183336]">
             <section className=" lg:max-w-[90%] mx-auto sm:py-16 lg:py-24">
                 <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
                     <div className="flex gap-12 flex-col-reverse lg:flex-row">

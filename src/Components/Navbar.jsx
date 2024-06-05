@@ -124,7 +124,7 @@ const Navbar = () => {
                 </div>
 
                 <div className="relative flex-grow">
-                    <header className={`bg-white dark:bg-[#1b3c44] text-heading dark:text-heading2 lg:absolute -top-[200px] ${hidden ? '-top-[15px]' : '-top-[15px]'} left-1 right-1 lg:w-[1120px]  z-10  mx-auto -mt-4 transition-all duration-[0.5s] `}>
+                    <header className={`bg-white dark:bg-[#1b3c44] text-heading dark:text-heading2 lg:absolute  ${hidden ? '-top-[200px]' : '-top-[15px]'} left-1 right-1 lg:w-[1120px]  z-10  mx-auto -mt-4 transition-all duration-[0.5s] `}>
                         <div className="px-4 mx-auto sm:px-6 lg:px-8">
                             <div className="flex items-center justify-between h-16 lg:h-20">
                                 <div className="flex-shrink-0">
@@ -205,7 +205,7 @@ const Navbar = () => {
 
                 </div>
             </div>
-            <header className={`fixed w-full bg-white dark:bg-[#1b3c44] text-heading dark:text-heading2 z-10  transition-transform duration-[0.5s] 
+            <header className={`fixed w-full bg-white dark:bg-[#1b3c44] text-heading dark:text-heading2 z-20  transition-transform duration-[0.5s] 
             ${showNavbar ? 'transform -translate-y-[315px] md:-translate-y-[205px] lg:-translate-y-[125%]' : 'transform -translate-y-[380px]'} ${hidden && 'none'}`}>
                 <div className="px-4 mx-auto sm:px-6 lg:px-8">
                     <div className="flex items-center justify-between h-16 lg:h-20">

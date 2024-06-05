@@ -77,3 +77,56 @@
     object-fit: cover;
     object-position: 50% 50%;
 } */
+
+
+
+
+
+
+
+/* styles.css */
+.react-select__control {
+    background-color: #f0f0f0;
+    border-color: #ffffff;
+}
+
+ .react-select__menu {
+    background-color: #f0f0f0;
+}
+
+.react-select__option {
+    background-color: #e9e9e9;
+    color: #000;
+}
+
+ .react-select__option--is-selected {
+    background-color: #ffffff !important;
+    color: #fff;
+}
+
+ .react-select__option--is-focused {
+    background-color: #DBE6E6;
+}
+
+.dark .react-select__control {
+    background-color: #ffffff;
+    border-color: #1B7261;
+}
+
+.dark .react-select__menu {
+    background-color: #ffffff;
+}
+
+.dark .react-select__option {
+    background-color: #ffffff;
+    color: #fff;
+}
+
+.dark .react-select__option--is-selected {
+    background-color: #ffffff;
+    color: #fff;
+}
+
+.dark .react-select__option--is-focused {
+    background-color: #ffffff;
+}
