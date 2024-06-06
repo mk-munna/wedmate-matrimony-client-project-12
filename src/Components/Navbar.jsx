@@ -15,13 +15,14 @@ import { MdOutlineAlternateEmail } from 'react-icons/md';
 import { SlSocialFacebook, SlSocialLinkedin } from 'react-icons/sl';
 import { HiOutlineUser } from 'react-icons/hi';
 import { Tooltip } from 'react-tooltip'
+import { useTheme } from '../Provider/ThemeProvider';
 // import './Header.css'
 
 const Navbar = () => {
     const { user, loading } = useContext(AuthContext)
+    const {theme, setTheme} = useTheme()
     // console.log(user)
-    const themeFromLocalStorage = localStorage.getItem("theme")
-    const [theme, setTheme] = useState(themeFromLocalStorage);
+
     const [isOpen, setIsOpen] = useState(false)
     const [lastScrollTop, setLastScrollTop] = useState(0);
     const [showNavbar, setShowNavbar] = useState(false);
@@ -64,17 +65,6 @@ const Navbar = () => {
                 console.log(err.message);
             })
     }
-    useEffect(() => {
-        if (theme) {
-            // save theme to local storage
-            localStorage.setItem("theme", "true");
-            document.querySelector("html").classList.add("dark")
-        } else {
-            localStorage.removeItem("theme");
-            document.querySelector("html").classList.remove("dark")
-        }
-    }, [theme])
-
     const handleClose = () => {
         setIsOpen(!isOpen);
         if (window.scrollY >= 150) { 

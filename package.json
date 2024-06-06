@@ -28,6 +28,7 @@
     "react-select": "^5.8.0",
     "react-simple-typewriter": "^5.0.1",
     "react-tooltip": "^5.26.4",
+    "react-vertical-timeline-component": "^3.6.0",
     "sort-by": "^1.2.0"
   },
   "devDependencies": {
