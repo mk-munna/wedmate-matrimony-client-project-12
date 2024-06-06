@@ -23,7 +23,7 @@ const HowItWorks = () => {
                 <VerticalTimeline className='before:!bg-primary'>
                     <VerticalTimelineElement
                         className="vertical-timeline-element--work "
-                        contentStyle={{ background: theme ? "#183336" : "#ECF0F2", boxShadow: "0px 5px 500px -5px #1B7261" }}
+                        contentStyle={{ background: theme ? "#183336" : "#ECF0F2", boxShadow: theme ? "0px 5px 500px -5px #1B7261" : "0px 5px 500px -5px #83B2A9" }}
                         contentArrowStyle={{ borderRight: '10px solid  #1B7261' }}
                         date="TIMING: 7:00 PM"
                         dateClassName={"text-heading dark:text-heading2"}
@@ -37,7 +37,7 @@ const HowItWorks = () => {
                     </VerticalTimelineElement>
                     <VerticalTimelineElement
                         className="vertical-timeline-element--work "
-                        contentStyle={{ background: theme ? "#183336" : "#ECF0F2", boxShadow: "0px 5px 500px -5px #1B7261" }}
+                        contentStyle={{ background: theme ? "#183336" : "#ECF0F2", boxShadow: theme ? "0px 5px 500px -5px #1B7261" : "0px 5px 500px -5px #668261" }}
                         contentArrowStyle={{ borderRight: '10px solid  #1B7261' }}
                         date="TIMING: 7:00 PM"
                         dateClassName={"text-heading dark:text-heading2"}
@@ -51,7 +51,7 @@ const HowItWorks = () => {
                     </VerticalTimelineElement>
                     <VerticalTimelineElement
                         className="vertical-timeline-element--work "
-                        contentStyle={{ background: theme ? "#183336" : "#ECF0F2", boxShadow: "0px 5px 500px -5px #1B7261" }}
+                        contentStyle={{ background: theme ? "#183336" : "#ECF0F2", boxShadow: theme ? "0px 5px 500px -5px #1B7261" : "0px 5px 500px -5px #A89478" }}
                         contentArrowStyle={{ borderRight: '10px solid  #1B7261' }}
                         date="TIMING: 7:00 PM"
                         dateClassName={"text-heading dark:text-heading2"}
@@ -65,7 +65,7 @@ const HowItWorks = () => {
                     </VerticalTimelineElement>
                     <VerticalTimelineElement
                         className="vertical-timeline-element--work "
-                        contentStyle={{ background: theme ? "#183336" : "#ECF0F2", boxShadow: "0px 5px 500px -5px #1B7261" }}
+                        contentStyle={{ background: theme ? "#183336" : "#ECF0F2", boxShadow: theme ? "0px 5px 500px -5px #1B7261" : "0px 5px 500px -5px #5A956F" }}
                         contentArrowStyle={{ borderRight: '10px solid  #1B7261' }}
                         date="TIMING: 7:00 PM"
                         dateClassName={"text-heading dark:text-heading2"}
@@ -79,7 +79,7 @@ const HowItWorks = () => {
                     </VerticalTimelineElement>
                     <VerticalTimelineElement
                         className="vertical-timeline-element--work "
-                        contentStyle={{ background: theme ? "#183336" : "#ECF0F2", boxShadow: "0px 5px 500px -5px #1B7261" }}
+                        contentStyle={{ background: theme ? "#183336" : "#ECF0F2", boxShadow: theme ? "0px 5px 500px -5px #1B7261" : "0px 5px 500px -5px #56889D" }}
                         contentArrowStyle={{ borderRight: '10px solid  #1B7261' }}
                         date="TIMING: 7:00 PM"
                         dateClassName={"text-heading dark:text-heading2"}
@@ -93,15 +93,15 @@ const HowItWorks = () => {
                     </VerticalTimelineElement>
                     <VerticalTimelineElement
                         className="vertical-timeline-element--work "
-                        contentStyle={{ background: theme ? "#183336" : "#ECF0F2", boxShadow: "0px 5px 500px -5px #1B7261" }}
+                        contentStyle={{ background: theme ? "#183336" : "#ECF0F2", boxShadow: theme ? "0px 5px 500px -5px #1B7261" : "0px 5px 500px -5px #ffd0d0" }}
                         contentArrowStyle={{ borderRight: '10px solid  #1B7261' }}
                         date="TIMING: 7:00 PM"
                         dateClassName={"text-heading dark:text-heading2"}
-                        iconStyle={{ background: '#D63484', color: '#fff' }}
+                        iconStyle={{ background: '#e77878', color: '#fff' }}
                         icon={<TbHeartHandshake />}
                     >
                         <h3 className=" text-3xl text-heading dark:text-heading2">Getting Marriage</h3>
-                        <p className='text-Description dark:text-Description2'>
+                        <p className='text-Description  dark:text-Description2'>
                             As your relationship grows, consider marriage. Our platform provides tips and resources to help you prepare for a lifelong commitment. Celebrate your love story and start your happily ever after.
                         </p>
                     </VerticalTimelineElement>

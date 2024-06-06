@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import Banner from '../../Components/Banner';
 import PremiumProfileCards from '../../Components/PremiumProfileCards';
 import HowItWorks from '../../Components/HowItWorks';
+import CounterSection from '../../Components/CounterSection';
 
 const Home = () => {
     return (
@@ -13,6 +14,7 @@ const Home = () => {
             <Banner></Banner>
             <PremiumProfileCards></PremiumProfileCards>
             <HowItWorks></HowItWorks>
+            <CounterSection></CounterSection>
         </div>
     );
 };

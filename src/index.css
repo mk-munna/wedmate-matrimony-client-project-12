@@ -79,8 +79,11 @@
 } */
 
 
+/* /shadow counter */
 
-
+.shadowCounter {
+    text-shadow: 0px 5px 500px -5px #1B7261;
+}
 
 
 
