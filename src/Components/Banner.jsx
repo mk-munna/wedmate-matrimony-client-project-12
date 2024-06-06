@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from "framer-motion";
 import { Typewriter } from 'react-simple-typewriter'
 import { MdOutlineSupervisorAccount } from 'react-icons/md';
@@ -7,6 +7,22 @@ import { Link } from 'react-router-dom';
 
 
 const Banner = () => {
+    const [mobile, setMobile] = useState(false)
+    const screen = window.innerWidth
+    console.log(screen)
+    useEffect(() => {
+        const handleResize = () => { 
+            if (window.innerWidth < 768) {
+                setMobile(true)
+            } else {
+                setMobile(false)
+            }
+        }
+        window.addEventListener('resize', handleResize)
+        return () => {
+            window.removeEventListener('resize', handleResize)
+        }
+    },[])
     return (
         <div className="bg-[#ECF0F2] dark:bg-[#183336]">
             <section className=" lg:max-w-[90%] mx-auto sm:py-16 lg:py-24">
@@ -44,8 +60,8 @@ const Banner = () => {
                         <div className='lg:w-1/2 py-8 relative gap-6 flex'>
                             <img className='absolute -top-12 -left-[60px] movingLeftRight' src="https://templates.hibotheme.com/wazo/default/assets/img/hero/hero-shape-7.png" alt="" />
                             <motion.div
-                                initial={{ opacity: 1, y: 50, x: 200 }}
-                                animate={{ opacity: 1, y: 50, x: 220 }}
+                                initial={{ opacity: 1, y: 50, x: mobile? 180: 240 }}
+                                animate={{ opacity: 1, y: 50, x: mobile? 200 : 260 }}
                                 transition={{ duration: 3, repeat: Infinity, repeatType: 'reverse' }}
                                 className='absolute'>
                                 <img className='w-[150px]' src="https://templates.hibotheme.com/wazo/default/assets/img/hero/hero-shape-2.png" alt="" />

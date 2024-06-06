@@ -90,7 +90,7 @@
     border-color: #ffffff;
 }
 
- .react-select__menu {
+.react-select__menu {
     background-color: #f0f0f0;
 }
 
@@ -99,12 +99,12 @@
     color: #000;
 }
 
- .react-select__option--is-selected {
+.react-select__option--is-selected {
     background-color: #ffffff !important;
     color: #fff;
 }
 
- .react-select__option--is-focused {
+.react-select__option--is-focused {
     background-color: #DBE6E6;
 }
 
@@ -131,3 +131,36 @@
     background-color: #ffffff;
 }
 
+
+/* rotate */
+.rotating {
+    -webkit-animation: rotate 5s linear alternate-reverse infinite;
+    animation: rotate 5s linear alternate-reverse infinite;
+}
+
+
+@keyframes rotate {
+    0% {
+        transform: rotate(-5deg);
+
+    }
+
+    100% {
+        transform: rotate(12deg);
+    }
+
+}
+.rotating2 {
+    -webkit-animation: rotate2 5s linear alternate-reverse infinite;
+    animation: rotate2 5s linear alternate-reverse infinite;
+}
+
+@keyframes rotate2 {
+    0% {
+        transform: rotate(5deg) scaleX(-1);
+    }
+
+    100% {
+        transform: rotate(-12deg) scaleX(-1);
+    }
+}
