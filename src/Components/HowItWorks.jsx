@@ -93,7 +93,7 @@ const HowItWorks = () => {
                     </VerticalTimelineElement>
                     <VerticalTimelineElement
                         className="vertical-timeline-element--work "
-                        contentStyle={{ background: theme ? "#183336" : "#ECF0F2", boxShadow: theme ? "0px 5px 500px -5px #1B7261" : "0px 5px 500px -5px #ffd0d0" }}
+                        contentStyle={{ background: theme ? "#183336" : "#ECF0F2", boxShadow: theme ? "0px 5px 500px -5px #1B7261" : "0px 5px 500px -5px #ffd7d7" }}
                         contentArrowStyle={{ borderRight: '10px solid  #1B7261' }}
                         date="TIMING: 7:00 PM"
                         dateClassName={"text-heading dark:text-heading2"}

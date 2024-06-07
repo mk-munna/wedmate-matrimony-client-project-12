@@ -1,0 +1,72 @@
+[
+    {
+        "_id": "1",
+        "coupleImage": "https://rn53themes.net/themes/matrimo/images/couples/9.jpg",
+        "marriageDate": "2023-06-01",
+        "reviewStar": 5,
+        "successStoryText": "We met through WedMate and instantly connected. Our journey began with a simple message and blossomed into a beautiful relationship."
+    },
+    {
+        "_id": "2",
+        "coupleImage": "https://rn53themes.net/themes/matrimo/images/couples/10.jpg",
+        "marriageDate": "2023-05-15",
+        "reviewStar": 4,
+        "successStoryText": "WedMate made it easy to find my soulmate. From the first day we met, we knew there was something special between us. We're so happy together!"
+    },
+    {
+        "_id": "3",
+        "coupleImage": "https://rn53themes.net/themes/matrimo/images/couples/3.jpg",
+        "marriageDate": "2023-04-20",
+        "reviewStar": 5,
+        "successStoryText": "A perfect match, thanks to WedMate. Our wedding was magical and filled with love and joy. We feel incredibly blessed to have found each other!"
+    },
+    {
+        "_id": "4",
+        "coupleImage": "https://rn53themes.net/themes/matrimo/images/couples/5.jpg",
+        "marriageDate": "2023-03-30",
+        "reviewStar": 4,
+        "successStoryText": "We found love and happiness through WedMate. The platform made it easy to connect and communicate. Highly recommended!"
+    },
+    {
+        "_id": "5",
+        "coupleImage": "https://rn53themes.net/themes/matrimo/images/couples/6.jpg",
+        "marriageDate": "2023-02-25",
+        "reviewStar": 5,
+        "successStoryText": "WedMate changed our lives forever. We were able to connect, share our lives, and build a strong foundation for our future. We're eternally grateful!"
+    },
+    {
+        "_id": "6",
+        "coupleImage": "https://rn53themes.net/themes/matrimo/images/gallery/3.jpg",
+        "marriageDate": "2023-01-15",
+        "reviewStar": 5,
+        "successStoryText": "Meeting on WedMate was the best thing that happened to us. From our first conversation to our wedding day, the journey was incredible. Thank you!"
+    },
+    {
+        "_id": "7",
+        "coupleImage": "https://rn53themes.net/themes/matrimo/images/blog/3.jpg",
+        "marriageDate": "2022-12-10",
+        "reviewStar": 4,
+        "successStoryText": "We found each other on WedMate and now share a beautiful life together. The journey was filled with laughter and love. We are forever grateful!"
+    },
+    {
+        "_id": "8",
+        "coupleImage": "https://templates.hibotheme.com/wazo/default/assets/img/blog/blog-4.jpg",
+        "marriageDate": "2022-11-05",
+        "reviewStar": 5,
+        "successStoryText": "Thanks to WedMate, we found true love. Our story began with a simple match and grew into a beautiful relationship. We're so happy!"
+    },
+    {
+        "_id": "9",
+        "coupleImage": "https://templates.hibotheme.com/wazo/default/assets/img/blog/blog-2.jpg",
+        "marriageDate": "2022-10-01",
+        "reviewStar": 5,
+        "successStoryText": "WedMate helped us find each other. Our wedding day was perfect, and our journey was filled with love. Thank you for bringing us together!"
+    },
+    {
+        "_id": "10",
+        "coupleImage": "https://templates.hibotheme.com/wazo/default/assets/img/blog/blog-3.jpg",
+        "marriageDate": "2022-09-20",
+        "reviewStar": 4,
+        "successStoryText": "We owe our happiness to WedMate. The platform allowed us to connect in ways we never thought possible. Thank you for the amazing experience!"
+    }
+]

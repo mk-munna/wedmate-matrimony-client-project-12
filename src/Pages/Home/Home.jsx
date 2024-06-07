@@ -4,6 +4,7 @@ import Banner from '../../Components/Banner';
 import PremiumProfileCards from '../../Components/PremiumProfileCards';
 import HowItWorks from '../../Components/HowItWorks';
 import CounterSection from '../../Components/CounterSection';
+import SuccessStory from '../../Components/SuccessStory';
 
 const Home = () => {
     return (
@@ -15,6 +16,7 @@ const Home = () => {
             <PremiumProfileCards></PremiumProfileCards>
             <HowItWorks></HowItWorks>
             <CounterSection></CounterSection>
+            <SuccessStory></SuccessStory>
         </div>
     );
 };
