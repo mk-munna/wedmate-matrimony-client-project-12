@@ -120,7 +120,7 @@ const Navbar = () => {
                                 <div className="flex-shrink-0">
                                     <a href="#" title="" className="flex gap-2 items-center">
                                         <img className='w-[25px] md:w-[30px] lg:w-[40px]' src={logo} alt="" />
-                                        <p className=' font-semibold text-xl md:text-2xl lg:text-3xl'>WedMate</p>
+                                        <p className=' text-xl md:text-2xl lg:text-3xl'>WedMate</p>
                                     </a>
                                 </div>
                                 <div>
@@ -138,10 +138,10 @@ const Navbar = () => {
                                 
 
                                 <ul className="hidden ml-auto lg:flex lg:items-center lg:justify-center lg:space-x-10">
-                                    <NavLink className={'text-base font-semibold  transition-all duration-200 hover:text-opacity-80'} to={'/'}><li className=''>Home</li></NavLink>
-                                    <NavLink className={'text-base font-semibold  transition-all duration-200 hover:text-opacity-80'} to={'/bio-datas'}><li className=''>Biodatas</li></NavLink>
-                                    <NavLink className={'text-base font-semibold  transition-all duration-200 hover:text-opacity-80'} to={'/about-us'}><li className=''>About</li></NavLink>
-                                    <NavLink className={'text-base font-semibold  transition-all duration-200 hover:text-opacity-80'} to={'/contact'}><li className=''>Contact</li></NavLink>
+                                    <NavLink className={'text-base  transition-all duration-200 hover:text-opacity-80'} to={'/'}><li className=''>Home</li></NavLink>
+                                    <NavLink className={'text-base  transition-all duration-200 hover:text-opacity-80'} to={'/bio-datas'}><li className=''>Biodatas</li></NavLink>
+                                    <NavLink className={'text-base  transition-all duration-200 hover:text-opacity-80'} to={'/about-us'}><li className=''>About</li></NavLink>
+                                    <NavLink className={'text-base  transition-all duration-200 hover:text-opacity-80'} to={'/contact'}><li className=''>Contact</li></NavLink>
                                     <div className="w-px h-5 bg-primary"></div>
                                     <div className='flex items-center'>
                                         {
@@ -202,7 +202,7 @@ const Navbar = () => {
                         <div className="flex-shrink-0">
                             <a href="#" title="" className="flex gap-2 items-center">
                                 <img className='w-[25px] lg:w-[40px]' src={logo} alt="" />
-                                <p className=' font-semibold text-xl lg:text-3xl'>WedMate</p>
+                                <p className=' text-xl lg:text-3xl'>WedMate</p>
                             </a>
                         </div>
                         <div>
@@ -222,9 +222,9 @@ const Navbar = () => {
                         </div>
 
                         <ul className="hidden ml-auto lg:flex lg:items-center lg:justify-center lg:space-x-10">
-                            <NavLink className={'text-base font-semibold  transition-all duration-200 hover:text-opacity-80'} to={'/'}><li className=''>Home</li></NavLink>
-                            <NavLink className={'text-base font-semibold  transition-all duration-200 hover:text-opacity-80'} to={'/fnsf'}><li className=''>ALl Jobs</li></NavLink>
-                            <NavLink className={'text-base font-semibold  transition-all duration-200 hover:text-opacity-80'} to={'/gsgwgw'}><li className=''>Contact</li></NavLink>
+                            <NavLink className={'text-base  transition-all duration-200 hover:text-opacity-80'} to={'/'}><li className=''>Home</li></NavLink>
+                            <NavLink className={'text-base  transition-all duration-200 hover:text-opacity-80'} to={'/fnsf'}><li className=''>ALl Jobs</li></NavLink>
+                            <NavLink className={'text-base  transition-all duration-200 hover:text-opacity-80'} to={'/gsgwgw'}><li className=''>Contact</li></NavLink>
                             <div className="w-px h-5 bg-primary"></div>
                             <div className='flex items-center'>
                                 {
@@ -284,7 +284,7 @@ const Navbar = () => {
                     <div className="flex-shrink-0">
                         <a href="#" title="" className="flex gap-2 items-center">
                             <img className='w-[25px] lg:w-[40px]' src={logo} alt="" />
-                            <p className=' font-semibold text-xl lg:text-3xl'>WedMate</p>
+                            <p className=' text-xl lg:text-3xl'>WedMate</p>
                         </a>
                     </div>
                     <NavLink className={''} to={'/'} onClick={() => { setIsOpen(false) }}>Home</NavLink>
@@ -333,7 +333,7 @@ const Navbar = () => {
 
                                     </div>
                                         <div>
-                                            <p className='font-semibold text-lg'>{user?.displayName}</p>
+                                            <p className='text-lg'>{user?.displayName}</p>
                                             <p className='text-sm font-light'>{user?.email}</p>
                                             <div className='flex items-center gap-4 mt-4'>
                                                 <NavLink to={'/dashboard'} className={'bg-[#596e42] rounded-md px-2 py-1 text-white text-sm font-light'}>Dashboard</NavLink>
