@@ -8,12 +8,28 @@ import Rating from '@mui/material/Rating';
 import Stack from '@mui/material/Stack';
 import { motion } from 'framer-motion';
 
-const SuccessStory = () => {
+const NextArrow = ({ onClick }) => {
+    return (
+        <div className="custom-arrow custom-next" onClick={onClick}>
+            <i className="fas bg-primary p-2 absolute text-white -right-10 bottom-[30%] rounded-md fa-chevron-right"></i>
+        </div>
+    );
+};
 
+const PrevArrow = ({ onClick }) => {
+    return (
+        <div className="custom-arrow custom-prev" onClick={onClick}>
+            <i className="fas bg-primary p-2 text-white absolute -left-10 bottom-[30%] rounded-md fa-chevron-left"></i>
+        </div>
+    );
+};
+
+const SuccessStory = () => {
     const fetchSuccessStories = async () => {
         const { data } = await axios.get('../../public/success.json');
         return data;
     };
+
     const { data, isLoading, error } = useQuery({
         queryKey: ['successStories'],
         queryFn: fetchSuccessStories,
@@ -22,10 +38,7 @@ const SuccessStory = () => {
     const settings = {
         dots: true,
         infinite: true,
-        speed: 500,
-        // centerPadding: "60px",
-        // className: "center",
-        // centerMode: true,
+        speed: 1000,
         slidesToShow: 3,
         slidesToScroll: 1,
         initialSlide: 0,
@@ -33,6 +46,8 @@ const SuccessStory = () => {
         autoplaySpeed: 2000,
         swipeToSlide: true,
         pauseOnHover: true,
+        nextArrow: <NextArrow />,
+        prevArrow: <PrevArrow />,
         responsive: [
             {
                 breakpoint: 1024,
@@ -40,25 +55,25 @@ const SuccessStory = () => {
                     slidesToShow: 2,
                     slidesToScroll: 1,
                     infinite: true,
-                    dots: true
-                }
+                    dots: true,
+                },
             },
             {
                 breakpoint: 600,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
-                    initialSlide: 2
-                }
+                    initialSlide: 2,
+                },
             },
             {
                 breakpoint: 480,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
+                    slidesToScroll: 1,
+                },
+            },
+        ],
     };
 
     if (isLoading) return <div>Loading...</div>;
@@ -66,13 +81,13 @@ const SuccessStory = () => {
 
     return (
         <div className='py-12 px-6 md:px-10 lg:px-20'>
-                <motion.div
-                    initial={{ opacity: 1, y: 150, x: 100 }}
-                    animate={{ opacity: 1, y: 80, x: 70 }}
-                    transition={{ duration: 10, repeat: Infinity, repeatType: 'reverse' }}
-                    className='absolute'>
-                    <img className='' src="https://templates.hibotheme.com/wazo/default/assets/img/hero/hero-shape-5.png" alt="" />
-                </motion.div>
+            <motion.div
+                initial={{ opacity: 1, y: 150, x: 100 }}
+                animate={{ opacity: 1, y: 80, x: 70 }}
+                transition={{ duration: 10, repeat: Infinity, repeatType: 'reverse' }}
+                className='absolute'>
+                <img className='' src="https://templates.hibotheme.com/wazo/default/assets/img/hero/hero-shape-5.png" alt="" />
+            </motion.div>
             <h1 className="pl-5 border-l-4 text-primary font-semibold text-4xl">
                 Heartwarming <span className='font-extrabold dark:text-heading2 text-heading'>Success Stories <br /> of Love</span> and Commitment
             </h1>
@@ -80,9 +95,9 @@ const SuccessStory = () => {
                 Uncover beautiful love stories! Witness the inspiring journeys of couples who discovered true love and happiness through our community.
             </p>
             <div className="slider-container mt-12">
-                <Slider {...settings} >
-                    {data.sort((a, b) => new Date(b.marriageDate) - new Date(a.marriageDate)).map(story => (
-                        <div key={story._id} className=' px-4 pt-[65px] relative'>
+                <Slider {...settings}>
+                    {data.sort((a, b) => new Date(b.marriageDate) - new Date(a.marriageDate)).map((story) => (
+                        <div key={story._id} className='px-4 pt-[65px] relative'>
                             <img
                                 style={{ clipPath: 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 51%)' }}
                                 src={story.coupleImage} alt="Couple" className='size-32 absolute left-12 -top-0 object-cover' />
@@ -93,7 +108,7 @@ const SuccessStory = () => {
                                         <Rating name="size-small" defaultValue={story.reviewStar} size="small" />
                                     </Stack>
                                 </div>
-                                <p className='mt-6 font-light'>{story.successStoryText}</p>
+                                <p className='mt-6 font-light text-Description dark:text-Description2'>{story.successStoryText}</p>
                             </div>
                         </div>
                     ))}
