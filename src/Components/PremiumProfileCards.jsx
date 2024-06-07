@@ -53,40 +53,43 @@ const PremiumProfileCards = () => {
                         Welcome to our premium profile showcase! Explore and celebrate these exceptional individuals who shine brightly in our community spotlight.
                     </p>
 
-                    <Select
-                        options={options}
-                        defaultValue={selectedOption}
-                        onChange={setSelectedOption}
-                        styles={{
-                            control: (baseStyles) => ({
-                                ...baseStyles,
-                                fontSize: '12px',
-                                backgroundColor: '#1C7261',
-                                border: "none",
-                            }),
-                            menu: (baseStyles) => ({
-                                ...baseStyles,
-                                fontSize: "12px",
-                                border: "none",
-                            }),
-                            singleValue: (baseStyles) => ({
-                                ...baseStyles,
-                                color: 'white',
+                    <div className='flex justify-center'>
+                        <Select
+                            className='mt-6 w-[130px]'
+                            options={options}
+                            defaultValue={selectedOption}
+                            onChange={setSelectedOption}
+                            styles={{
+                                control: (baseStyles) => ({
+                                    ...baseStyles,
+                                    fontSize: '12px',
+                                    backgroundColor: '#1C7261',
+                                    border: "none",
+                                }),
+                                menu: (baseStyles) => ({
+                                    ...baseStyles,
+                                    fontSize: "12px",
+                                    border: "none",
+                                }),
+                                singleValue: (baseStyles) => ({
+                                    ...baseStyles,
+                                    color: 'white',
 
-                            }),
-                        }}
-                        theme={(theme) => ({
-                            ...theme,
-                            border: "none",
-                            borderRadius: 5,
-                            fontSIze: "12px",
-                            colors: {
-                                ...theme.colors,
-                                primary25: '#DBE6E6',
-                                primary: '#1B7261',
-                            },
-                        })}
-                    />
+                                }),
+                            }}
+                            theme={(theme) => ({
+                                ...theme,
+                                border: "none",
+                                borderRadius: 5,
+                                fontSIze: "12px",
+                                colors: {
+                                    ...theme.colors,
+                                    primary25: '#DBE6E6',
+                                    primary: '#1B7261',
+                                },
+                            })}
+                        />
+                    </div>
                 </div>
             </div>
 

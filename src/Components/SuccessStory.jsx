@@ -10,16 +10,16 @@ import { motion } from 'framer-motion';
 
 const NextArrow = ({ onClick }) => {
     return (
-        <div className="custom-arrow custom-next" onClick={onClick}>
-            <i className="fas bg-primary p-2 absolute text-white -right-10 bottom-[30%] rounded-md fa-chevron-right"></i>
+        <div className="custom-arrow custom-next " onClick={onClick}>
+            <i className="fas bg-primary p-2 absolute text-white right-0 lg:-right-10 bottom-[30%] rounded-md fa-chevron-right"></i>
         </div>
     );
 };
 
 const PrevArrow = ({ onClick }) => {
     return (
-        <div className="custom-arrow custom-prev" onClick={onClick}>
-            <i className="fas bg-primary p-2 text-white absolute -left-10 bottom-[30%] rounded-md fa-chevron-left"></i>
+        <div className="custom-arrow custom-prev " onClick={onClick}>
+            <i className="fas bg-primary p-2 text-white absolute lg:-left-10 bottom-[30%] rounded-md fa-chevron-left"></i>
         </div>
     );
 };

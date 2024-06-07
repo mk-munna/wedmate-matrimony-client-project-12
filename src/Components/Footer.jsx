@@ -10,7 +10,7 @@ const Footer = () => {
         <div className='mt-12'>
             <hr />
             <div className='my-20 px-10 lg:px-20 flex flex-col lg:flex-row gap-8'>
-                <div className="w-[400px]">
+                <div className="lg:w-[400px]">
                     <a href="#" title="" className="flex gap-2 items-center">
                         <img className='w-[40px]' src={logo} alt="" />
                         <p className=' font-semibold text-3xl'>WedMate</p>
