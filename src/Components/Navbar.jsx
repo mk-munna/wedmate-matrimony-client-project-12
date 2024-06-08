@@ -138,10 +138,10 @@ const Navbar = () => {
                                 
 
                                 <ul className="hidden ml-auto lg:flex lg:items-center lg:justify-center lg:space-x-10">
-                                    <NavLink className={'text-base  transition-all duration-200 hover:text-opacity-80'} to={'/'}><li className=''>Home</li></NavLink>
-                                    <NavLink className={'text-base  transition-all duration-200 hover:text-opacity-80'} to={'/bio-datas'}><li className=''>Biodatas</li></NavLink>
-                                    <NavLink className={'text-base  transition-all duration-200 hover:text-opacity-80'} to={'/about-us'}><li className=''>About</li></NavLink>
-                                    <NavLink className={'text-base  transition-all duration-200 hover:text-opacity-80'} to={'/contact'}><li className=''>Contact</li></NavLink>
+                                    <NavLink className={'text-base  font-light transition-all duration-200 hover:text-opacity-80'} to={'/'}><li className=''>Home</li></NavLink>
+                                    <NavLink className={'text-base  font-light   transition-all duration-200 hover:text-opacity-80'} to={'/bio-datas'}><li className=''>Biodatas</li></NavLink>
+                                    <NavLink className={'text-base   font-light  transition-all duration-200 hover:text-opacity-80'} to={'/about-us'}><li className=''>About</li></NavLink>
+                                    <NavLink className={'text-base   font-light  transition-all duration-200 hover:text-opacity-80'} to={'/contact'}><li className=''>Contact</li></NavLink>
                                     <div className="w-px h-5 bg-primary"></div>
                                     <div className='flex items-center'>
                                         {
@@ -184,7 +184,7 @@ const Navbar = () => {
                                         }
 
                                         <div className=' pl-10'>
-                                            <button className='flex items-center gap-2 bg-primary dark:bg-[#2a6e55] rounded-md text-sm px-4 py-2 text-white dark:text-gray-200 font-light hover:shadow-md '>Get Premium</button>
+                                            <button className='h-[45px] w-[145px] dynamic-button-premium bg-primary text-white px-6 hover:text-primary py-3'><span className='absolute z-10 font-secondary top-[10px] left-[22px]'>Get Premium</span></button>
                                         </div>
                                     </div>
                                 </ul>
@@ -221,10 +221,10 @@ const Navbar = () => {
                             }
                         </div>
 
-                        <ul className="hidden ml-auto lg:flex lg:items-center lg:justify-center lg:space-x-10">
-                            <NavLink className={'text-base  transition-all duration-200 hover:text-opacity-80'} to={'/'}><li className=''>Home</li></NavLink>
-                            <NavLink className={'text-base  transition-all duration-200 hover:text-opacity-80'} to={'/fnsf'}><li className=''>ALl Jobs</li></NavLink>
-                            <NavLink className={'text-base  transition-all duration-200 hover:text-opacity-80'} to={'/gsgwgw'}><li className=''>Contact</li></NavLink>
+                        <ul className="hidden  ml-auto lg:flex lg:items-center lg:justify-center lg:space-x-10">
+                            <NavLink className={'text-base   font-light  transition-all duration-200 hover:text-opacity-80'} to={'/'}><li className=''>Home</li></NavLink>
+                            <NavLink className={'text-base   font-light  transition-all duration-200 hover:text-opacity-80'} to={'/fnsf'}><li className=''>ALl Jobs</li></NavLink>
+                            <NavLink className={'text-base   font-light  transition-all duration-200 hover:text-opacity-80'} to={'/gsgwgw'}><li className=''>Contact</li></NavLink>
                             <div className="w-px h-5 bg-primary"></div>
                             <div className='flex items-center'>
                                 {
@@ -267,7 +267,7 @@ const Navbar = () => {
                                 }
 
                                 <div className=' pl-10'>
-                                    <button className='flex items-center gap-2 bg-primary dark:bg-[#2a6e55] rounded-md text-sm px-4 py-2 text-white dark:text-gray-200 font-light hover:shadow-md '>Get Premium</button>
+                                    <button className='h-[45px] w-[145px] dynamic-button-premium bg-primary text-white px-6 hover:text-primary py-3'><span className='absolute z-10 font-secondary top-[10px] left-[22px]'>Get Premium</span></button>
                                 </div>
                             </div>
                         </ul>

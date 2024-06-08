@@ -115,7 +115,7 @@ const PremiumProfileCards = () => {
                         </div>
                         <div className='flex dark:text-heading2 justify-between'>
                             <p className='text-sm flex items-center gap-1'><SlLocationPin className='text-primary dark:text-heading2' /> Division : <span className='font-light'>{profile.permanent_division}</span></p>
-                            <button className='h-[25px] w-[110px] rounded-md text-sm dynamic-button2 text-primary px-6 hover:text-white py-3'><span className='absolute z-10 top-[3px] left-[18px] text-[12px]'>View Details</span></button>
+                            <button className='h-[25px] w-[110px] rounded-md text-sm dynamic-button2 text-primary dark:text-primary2 px-6 hover:text-white py-3'><span className='absolute z-10 top-[3px] left-[18px] text-[12px]'>View Details</span></button>
                         </div>
                     </div>
                 ))}

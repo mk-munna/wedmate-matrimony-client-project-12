@@ -15,6 +15,7 @@ import {
   QueryClientProvider,
 } from '@tanstack/react-query'
 import { ThemeProvider } from './Provider/ThemeProvider.jsx'
+import BioDatas from './Pages/BioDatas/BioDatas.jsx'
 
 // Create a client
 const queryClient = new QueryClient()
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>
+      },
+      {
+        path: '/bio-datas',
+        element: <BioDatas></BioDatas>
       },
       {
         path: '/login',

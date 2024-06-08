@@ -16,11 +16,11 @@
     transition-duration: 0.8s;
 
 }
-
 ul>a {
     position: relative;
     padding: 4px;
-
+    text-decoration: none;
+    color: inherit;
 }
 
 ul>a::after {
@@ -31,19 +31,20 @@ ul>a::after {
     height: 1px;
     width: 100%;
     background: #1B7261;
-    transform: scale(0);
-    transform-origin: 120% -90%;
-    transition: transform 0.5s;
-    transition-timing-function: linear;
+    transform: scaleX(0);
+    transform-origin: 0% 100%;
+    transition: transform 0.3s linear;
 }
 
 ul>a:hover::after {
-    transform: scale(1);
-    transform-origin: -90% 120%;
-
+    transform: scaleX(1);
 }
+
 .active::after {
-    transform: scale(1);
+    transform: scaleX(1);
+}
+.active .dark {
+    color: #1ba875;
 }
 .dark ul>a::after {
     background: rgb(68, 177, 159);
