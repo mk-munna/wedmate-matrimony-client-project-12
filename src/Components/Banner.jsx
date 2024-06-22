@@ -27,8 +27,8 @@ const Banner = () => {
                 <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
                     <div className="flex gap-12 flex-col-reverse lg:flex-row">
                         <div className='lg:w-1/2'>
-                            <p className='font-semibold rounded-md text-primary inline px-4'>Welcome To WedMate</p>
-                            <h1 className="leading-[60px] mt-4 font-bold text-heading dark:text-heading2 md:text-[40px] text-[26px] lg:text-[50px]">Discover Your <br /> <span className='text-primary'><Typewriter
+                            <p className='font-semibold rounded-md text-primary dark:text-[#2f8675] inline px-4'>Welcome To WedMate</p>
+                            <h1 className="leading-[60px] mt-4 font-bold text-heading dark:text-heading2 md:text-[40px] text-[26px] lg:text-[50px]">Discover Your <br /> <span className='text-primary dark:text-[#2f8675]'><Typewriter
                                 words={['Soulmate', 'True Love', 'Life Partner', 'Perfect Match']}
                                 loop={20}
                                 typeSpeed={70}
@@ -38,7 +38,7 @@ const Banner = () => {
                             </h1>
                             <p className="mt-6 !text-[18px] font-secondary !leading-[26px] text-Description dark:text-Description2 sm:text-xl">Join WedMate and find your ideal partner. Connect with people who share your values and interests. Start your journey to lasting love today!</p>
                             <div className='mt-8 flex items-center gap-8'>
-                                <button className='h-[45px] w-[145px] dynamic-button bg-primary text-white px-6 hover:text-primary py-3'><span className='absolute z-10 top-[10px] left-[22px] font-secondary'>Register Now</span></button>
+                                <button className='h-[45px] w-[145px] dynamic-button bg-primary  text-white px-6 hover:text-primary duration-700 py-3'><span className='absolute z-10 top-[10px] left-[22px] font-secondary'>Register Now</span></button>
                                 <button className='flex text-gray-600 gap-5 items-center'><span className='bg-white p-3 rounded-full moving-up'><MdOutlineSupervisorAccount className='text-2xl text-primary' /></span><Link to={'/sign-up'} className='hover:border-r border-primary dark:text-Description2 rounded-md z-[1] pr-4'>Try Free</Link></button>
                             </div>
                             <div className='flex flex-col md:flex-row mt-12 items-center gap-8'>

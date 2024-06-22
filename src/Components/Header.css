@@ -1,21 +1,23 @@
-.shadow-custom{
+.shadow-custom {
     box-shadow: 0px 5px 100px 100px #ffffff;
-    rotate:90deg;
+    rotate: 90deg;
     transition: all;
     position: static;
     top: 10px;
     transform: scale(1.1);
     right: 150px;
     transition-duration: 1s;
-    
+
 }
-.shadow-custom2{
+
+.shadow-custom2 {
     box-shadow: 0px 5px 30px 15px #ffffff;
     rotate: 0deg;
     transition: all;
     transition-duration: 0.8s;
 
 }
+
 ul>a {
     position: relative;
     padding: 4px;
@@ -43,12 +45,15 @@ ul>a:hover::after {
 .active::after {
     transform: scaleX(1);
 }
+
 .active .dark {
     color: #1ba875;
 }
+
 .dark ul>a::after {
     background: rgb(68, 177, 159);
 }
+
 /* a:active {
     transform: scale(0.95);
     transition: .1s;
@@ -56,27 +61,29 @@ ul>a:hover::after {
 
 @media screen and (max-width:820px) {
     .shadow-custom {
-            box-shadow: 0px 5px 60px 40px #ffffff;
-            rotate: 90deg;
-            transition: all;
-            position: static;
-            top: 10px;
-            transform: scale(1.1);
-            right: 150px;
-            transition-duration: 1s;
-    
-        }
+        box-shadow: 0px 5px 60px 40px #ffffff;
+        rotate: 90deg;
+        transition: all;
+        position: static;
+        top: 10px;
+        transform: scale(1.1);
+        right: 150px;
+        transition-duration: 1s;
+
+    }
 }
+
 @media screen and (max-width:375px) {
     .shadow-custom {
-            box-shadow: 0px 5px 40px 30px #ffffff;
-            rotate: 90deg;
-            transition: all;
-            position: static;
-            top: 10px;
-            transform: scale(1.1);
-            right: 150px;
-            transition-duration: 1s;
-    
-        }
+        box-shadow: 0px 5px 40px 30px #ffffff;
+        rotate: 90deg;
+        transition: all;
+        position: static;
+        top: 10px;
+        transform: scale(1.1);
+        right: 150px;
+        transition-duration: 1s;
+
+    }
 }
+

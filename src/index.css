@@ -104,6 +104,7 @@
 .dynamic-button-premium:hover::after {
     width: 50%;
 }
+
 /* object */
 
 /* .object-cover {
@@ -186,6 +187,7 @@
     }
 
 }
+
 .rotating2 {
     -webkit-animation: rotate2 5s linear alternate-reverse infinite;
     animation: rotate2 5s linear alternate-reverse infinite;
@@ -271,3 +273,75 @@
     color: black;
     /* Default text color for options */
 }
+
+/* img styles */
+
+.image-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.image-container img {
+    display: block;
+}
+
+.fallback-text {
+    position: absolute;
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    display: none;
+}
+
+.image-container img.error+.fallback-text {
+    display: block
+}
+
+
+/* /chat bubble/ */
+
+.button-shadow {
+    position: relative;
+    width: 46px;
+    height: 46px;
+    background-color: #1B7261;
+    /* Adjust color as needed */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: shadow-pulse 2s infinite;
+}
+
+.button-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@keyframes shadow-pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(27, 114, 97);
+    }
+
+    100% {
+        box-shadow: 0 0 30px 10px rgba(244, 175, 0, 0);
+    }
+}
+
+.button-shadow {
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 1.5s;
+    /* Adjust this to reduce the delay between animations */
+}
+
+
+
+/* css for get started select input */
+
+/* NewBioData.css */

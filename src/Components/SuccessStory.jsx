@@ -7,34 +7,36 @@ import "slick-carousel/slick/slick-theme.css";
 import Rating from '@mui/material/Rating';
 import Stack from '@mui/material/Stack';
 import { motion } from 'framer-motion';
+import useAxiosPublic from '../Hooks/useAxiosPublic';
 
 const NextArrow = ({ onClick }) => {
     return (
-        <div className="custom-arrow custom-next " onClick={onClick}>
-            <i className="fas bg-primary p-2 absolute text-white right-0 lg:-right-10 bottom-[30%] rounded-md fa-chevron-right"></i>
+        <div className="custom-arrow custom-next cursor-pointer " onClick={onClick}>
+            <i className="fas bg-primary p-2 z-[1] absolute text-white right-0 lg:-right-10 bottom-[30%] rounded-md fa-chevron-right"></i>
         </div>
     );
 };
 
 const PrevArrow = ({ onClick }) => {
     return (
-        <div className="custom-arrow custom-prev " onClick={onClick}>
-            <i className="fas bg-primary p-2 text-white absolute lg:-left-10 bottom-[30%] rounded-md fa-chevron-left"></i>
+        <div className="custom-arrow custom-prev cursor-pointer" onClick={onClick}>
+            <i className="fas bg-primary z-[1] p-2 text-white absolute lg:-left-10 bottom-[30%] rounded-md fa-chevron-left"></i>
         </div>
     );
 };
 
 const SuccessStory = () => {
+    const axiosPublic = useAxiosPublic()
     const fetchSuccessStories = async () => {
-        const { data } = await axios.get('../../public/success.json');
+        const { data } = await axiosPublic.get(`/success-stories`);
         return data;
     };
 
-    const { data, isLoading, error } = useQuery({
+    const { data, isPending, error } = useQuery({
         queryKey: ['successStories'],
         queryFn: fetchSuccessStories,
     });
-
+console.log({data, isPending, error});
     const settings = {
         dots: true,
         infinite: true,
@@ -76,8 +78,8 @@ const SuccessStory = () => {
         ],
     };
 
-    if (isLoading) return <div>Loading...</div>;
-    if (error) return <div>Error loading success stories</div>;
+    if (isPending) return <div className='text-center'>Loading...</div>;
+    if (error) return <div className='text-center'>Error loading success stories</div>;
 
     return (
         <div className='py-12 px-6 md:px-10 lg:px-20'>
@@ -88,15 +90,15 @@ const SuccessStory = () => {
                 className='absolute'>
                 <img className='' src="https://templates.hibotheme.com/wazo/default/assets/img/hero/hero-shape-5.png" alt="" />
             </motion.div>
-            <h1 className="pl-5 border-l-4 text-primary font-semibold text-4xl">
-                Heartwarming <span className='font-extrabold dark:text-heading2 text-heading'>Success Stories <br /> of Love</span> and Commitment
+            <h1 className="pl-5 border-l-4 text-primary dark:text-primary2 font-semibold text-4xl">
+                Heartwarming <span className='font-extrabold dark:text-[#bebebe] text-heading'>Success Stories <br /> of Love</span> and Commitment
             </h1>
             <p className="md:w-[700px] mt-6 !text-[18px] font-secondary !leading-[26px] text-Description dark:text-Description2 sm:text-xl">
                 Uncover beautiful love stories! Witness the inspiring journeys of couples who discovered true love and happiness through our community.
             </p>
             <div className="slider-container mt-12">
                 <Slider {...settings}>
-                    {data.sort((a, b) => new Date(b.marriageDate) - new Date(a.marriageDate)).map((story) => (
+                    {data?.sort((a, b) => new Date(b.marriageDate) - new Date(a.marriageDate)).map((story) => (
                         <div key={story._id} className='px-4 pt-[65px] relative'>
                             <img
                                 style={{ clipPath: 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 51%)' }}

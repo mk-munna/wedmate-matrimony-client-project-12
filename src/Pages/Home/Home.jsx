@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Banner from '../../Components/Banner';
 import PremiumProfileCards from '../../Components/PremiumProfileCards';
@@ -7,6 +7,9 @@ import CounterSection from '../../Components/CounterSection';
 import SuccessStory from '../../Components/SuccessStory';
 
 const Home = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
         <div>
             <Helmet>

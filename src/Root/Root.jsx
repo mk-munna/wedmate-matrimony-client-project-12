@@ -6,7 +6,7 @@ import ScrollToTop from "react-scroll-to-top";
 
 const Root = () => {
     return (
-        <div className='font-primary dark:bg-dark'>
+        <div className='font-primary bg-[#f6f8f6] dark:bg-dark'>
             <div className='lg:max-w-full'>
                 <Header></Header>
                 <Outlet></Outlet>
