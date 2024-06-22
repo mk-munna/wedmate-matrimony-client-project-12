@@ -36,6 +36,8 @@ import AdminSuccessStories from './Dashboard/Admin/AdminSuccessStories .jsx';
 import CheckoutPage from './Dashboard/User/CheckoutPage.jsx';
 import Contact from './Pages/ContactUs/Contact.jsx';
 import AboutUs from './Pages/AboutUs/AboutUs.jsx';
+import MyContactRequest from './Dashboard/User/MyContactRequest.jsx';
+import ApproveContactRequest from './Dashboard/Admin/ApproveContactRequest.jsx';
 // Create a query client
 const queryClient = new QueryClient();
 
@@ -96,6 +98,10 @@ const router = createBrowserRouter([
             element: <ViewBioData></ViewBioData>
           },
           {
+            path: 'contact-request',
+            element: <MyContactRequest></MyContactRequest>
+          },
+          {
             path: 'favourites',
             element: <FavouriteBioDatas></FavouriteBioDatas>
           },
@@ -123,6 +129,10 @@ const router = createBrowserRouter([
           {
             path: 'success-story',
             element: <AdminSuccessStories></AdminSuccessStories>
+          },
+          {
+            path: 'approved-contact-request',
+            element: <ApproveContactRequest></ApproveContactRequest>
           },
           
         ]
