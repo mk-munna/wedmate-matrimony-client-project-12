@@ -204,14 +204,14 @@ const Navbar = () => {
                                                                 onMouseEnter={() => setShowSubMenu(true)}
                                                                 onMouseLeave={() => setShowSubMenu(false)}
                                                                 to={isAdmin ? "/dashboard/admin-home" : "/dashboard/user-home"} className='font-light flex items-center gap-2  duration-[.35s]  '>Dashboard<MdKeyboardArrowDown /></Link>
-                                                            {
+                                                        
 
                                                                 <div
                                                                     onMouseEnter={() => setShowSubMenu(true)}
                                                                     onMouseLeave={() => setShowSubMenu(false)}
                                                                     className={`absolute rounded-md bg-white dark:bg-[#1B3C44] transition-all  duration-[.35s] font-light left-12 top-[70%] ${showSubMenu ? "scale-y-100 translate-y-0" : "scale-y-0 -translate-y-[115px]"}`}>
 
-                                                                    <ul className='w-[210px] px-4 pt-8 pb-4'>
+                                                                    <ul className={`${isAdmin ? "w-[220px]" : "w-[210px]"} px-4 pt-8 pb-4`}>
                                                                         {/* NavLink 1 */}
                                                                         <div
                                                                             onMouseEnter={() => setShowLine(true)}
@@ -226,85 +226,170 @@ const Navbar = () => {
                                                                                     to={isAdmin ? "/dashboard/admin-home" : "/dashboard/user-home"}
                                                                                     className={`hover:text-primary transition-all duration-[.35s] ${showLine ? "ml-1" : "-ml-2"}`}
                                                                                 >
-                                                                                    Dashboard
+                                                                                        {
+                                                                                            isAdmin?"Admin Home" : "User Home"
+                                                                                    }
                                                                                 </NavLink>
                                                                             </div>
                                                                         </div>
 
-                                                                        {/* NavLink 2 */}
-                                                                        <div
-                                                                            onMouseEnter={() => setShowLine1(true)}
-                                                                            onMouseLeave={() => setShowLine1(false)}
-                                                                            className="flex gap-2 items-center"
-                                                                        >
-                                                                            <div>
-                                                                                <div className={`w-[2px] bg-primary transition-all duration-[.35s] ${showLine1 ? "h-4" : "h-0"}`}></div>
-                                                                            </div>
-                                                                            <div className='py-2'>
-                                                                                <NavLink
-                                                                                    to="/dashboard/edit-biodata"
-                                                                                    className={`hover:text-primary transition-all duration-[.35s] ${showLine1 ? "ml-1" : "-ml-2"} `}
-                                                                                >
-                                                                                    Edit Biodata
-                                                                                </NavLink>
-                                                                            </div>
-                                                                        </div>
-                                                                        {/* NavLink 2 */}
-                                                                        <div
-                                                                            onMouseEnter={() => setShowLine2(true)}
-                                                                            onMouseLeave={() => setShowLine2(false)}
-                                                                            className="flex gap-2 items-center"
-                                                                        >
-                                                                            <div>
-                                                                                <div className={`w-[2px] bg-primary transition-all duration-[.35s] ${showLine2 ? "h-4" : "h-0"}`}></div>
-                                                                            </div>
-                                                                            <div className='py-2'>
-                                                                                <NavLink
-                                                                                    to="/dashboard/view-biodata"
-                                                                                    className={`hover:text-primary transition-all duration-[.35s] ${showLine2 ? "ml-1" : "-ml-2"} `}
-                                                                                >
-                                                                                    View Biodata
-                                                                                </NavLink>
-                                                                            </div>
-                                                                        </div>
+                                                                            {
+                                                                                isAdmin ? (
+                                                                                    <div>
+                                                                                        {/* NavLink 2 */}
+                                                                                        <div
+                                                                                            onMouseEnter={() => setShowLine1(true)}
+                                                                                            onMouseLeave={() => setShowLine1(false)}
+                                                                                            className="flex gap-2 items-center"
+                                                                                        >
+                                                                                            <div>
+                                                                                                <div className={`w-[2px] bg-primary transition-all duration-[.35s] ${showLine1 ? "h-4" : "h-0"}`}></div>
+                                                                                            </div>
+                                                                                            <div className='py-2'>
+                                                                                                <NavLink
+                                                                                                to="/dashboard/manage-users"
+                                                                                                    className={`hover:text-primary transition-all duration-[.35s] ${showLine1 ? "ml-1" : "-ml-2"} `}
+                                                                                                >
+                                                                                                    Manage Users
+                                                                                                </NavLink>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        {/* NavLink 2 */}
+                                                                                        <div
+                                                                                            onMouseEnter={() => setShowLine2(true)}
+                                                                                            onMouseLeave={() => setShowLine2(false)}
+                                                                                            className="flex gap-2 items-center"
+                                                                                        >
+                                                                                            <div>
+                                                                                                <div className={`w-[2px] bg-primary transition-all duration-[.35s] ${showLine2 ? "h-4" : "h-0"}`}></div>
+                                                                                            </div>
+                                                                                            <div className='py-2'>
+                                                                                                <NavLink
+                                                                                                to="/dashboard/approved-premium"
+                                                                                                    className={`hover:text-primary transition-all duration-[.35s] ${showLine2 ? "ml-1" : "-ml-2"} `}
+                                                                                                >
+                                                                                                    Approve Premium
+                                                                                                </NavLink>
+                                                                                            </div>
+                                                                                        </div>
 
-                                                                        {/* NavLink 3 */}
-                                                                        <div
-                                                                            onMouseEnter={() => setShowLine3(true)}
-                                                                            onMouseLeave={() => setShowLine3(false)}
-                                                                            className="flex gap-2 items-center"
-                                                                        >
-                                                                            <div>
-                                                                                <div className={`w-[2px] bg-primary transition-all duration-[.35s] ${showLine3 ? "h-4" : "h-0"}`}></div>
-                                                                            </div>
-                                                                            <div className='py-2'>
-                                                                                <NavLink
-                                                                                    to="/dashboard/contact-request"
-                                                                                    className={`hover:text-primary transition-all duration-[.35s] ${showLine3 ? "ml-1" : "-ml-2"} `}
-                                                                                >
-                                                                                    Contact Request
-                                                                                </NavLink>
-                                                                            </div>
-                                                                        </div>
+                                                                                        {/* NavLink 3 */}
+                                                                                        <div
+                                                                                            onMouseEnter={() => setShowLine3(true)}
+                                                                                            onMouseLeave={() => setShowLine3(false)}
+                                                                                            className="flex gap-2 items-center"
+                                                                                        >
+                                                                                            <div>
+                                                                                                <div className={`w-[2px] bg-primary transition-all duration-[.35s] ${showLine3 ? "h-4" : "h-0"}`}></div>
+                                                                                            </div>
+                                                                                            <div className='py-2'>
+                                                                                                <NavLink
+                                                                                                to="/dashboard/approved-contact-request"
+                                                                                                    className={`hover:text-primary transition-all duration-[.35s] ${showLine3 ? "ml-1" : "-ml-2"} `}
+                                                                                                >
+                                                                                                    Approve Contact Req..
+                                                                                                </NavLink>
+                                                                                            </div>
+                                                                                        </div>
 
-                                                                        {/* NavLink 4 */}
-                                                                        <div
-                                                                            onMouseEnter={() => setShowLine4(true)}
-                                                                            onMouseLeave={() => setShowLine4(false)}
-                                                                            className="flex gap-2 items-center"
-                                                                        >
-                                                                            <div>
-                                                                                <div className={`w-[2px] bg-primary transition-all duration-[.35s] ${showLine4 ? "h-4" : "h-0"}`}></div>
-                                                                            </div>
-                                                                            <div className='py-2'>
-                                                                                <NavLink
-                                                                                    to="/dashboard/favourites"
-                                                                                    className={`hover:text-primary transition-all duration-[.35s] ${showLine4 ? "ml-1" : "-ml-2"} `}
-                                                                                >
-                                                                                    Favourites Biodata
-                                                                                </NavLink>
-                                                                            </div>
-                                                                        </div>
+                                                                                        {/* NavLink 4 */}
+                                                                                        <div
+                                                                                            onMouseEnter={() => setShowLine4(true)}
+                                                                                            onMouseLeave={() => setShowLine4(false)}
+                                                                                            className="flex gap-2 items-center"
+                                                                                        >
+                                                                                            <div>
+                                                                                                <div className={`w-[2px] bg-primary transition-all duration-[.35s] ${showLine4 ? "h-4" : "h-0"}`}></div>
+                                                                                            </div>
+                                                                                            <div className='py-2'>
+                                                                                                <NavLink
+                                                                                                to="/dashboard/success-story"
+                                                                                                    className={`hover:text-primary transition-all duration-[.35s] ${showLine4 ? "ml-1" : "-ml-2"} `}
+                                                                                                >
+                                                                                                    Success Stories
+                                                                                                </NavLink>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                ) : (
+                                                                                        <div>
+                                                                                            {/* NavLink 2 */}
+                                                                                            <div
+                                                                                                onMouseEnter={() => setShowLine1(true)}
+                                                                                                onMouseLeave={() => setShowLine1(false)}
+                                                                                                className="flex gap-2 items-center"
+                                                                                            >
+                                                                                                <div>
+                                                                                                    <div className={`w-[2px] bg-primary transition-all duration-[.35s] ${showLine1 ? "h-4" : "h-0"}`}></div>
+                                                                                                </div>
+                                                                                                <div className='py-2'>
+                                                                                                    <NavLink
+                                                                                                        to="/dashboard/edit-biodata"
+                                                                                                        className={`hover:text-primary transition-all duration-[.35s] ${showLine1 ? "ml-1" : "-ml-2"} `}
+                                                                                                    >
+                                                                                                        Edit Biodata
+                                                                                                    </NavLink>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            {/* NavLink 2 */}
+                                                                                            <div
+                                                                                                onMouseEnter={() => setShowLine2(true)}
+                                                                                                onMouseLeave={() => setShowLine2(false)}
+                                                                                                className="flex gap-2 items-center"
+                                                                                            >
+                                                                                                <div>
+                                                                                                    <div className={`w-[2px] bg-primary transition-all duration-[.35s] ${showLine2 ? "h-4" : "h-0"}`}></div>
+                                                                                                </div>
+                                                                                                <div className='py-2'>
+                                                                                                    <NavLink
+                                                                                                        to="/dashboard/view-biodata"
+                                                                                                        className={`hover:text-primary transition-all duration-[.35s] ${showLine2 ? "ml-1" : "-ml-2"} `}
+                                                                                                    >
+                                                                                                        View Biodata
+                                                                                                    </NavLink>
+                                                                                                </div>
+                                                                                            </div>
+
+                                                                                            {/* NavLink 3 */}
+                                                                                            <div
+                                                                                                onMouseEnter={() => setShowLine3(true)}
+                                                                                                onMouseLeave={() => setShowLine3(false)}
+                                                                                                className="flex gap-2 items-center"
+                                                                                            >
+                                                                                                <div>
+                                                                                                    <div className={`w-[2px] bg-primary transition-all duration-[.35s] ${showLine3 ? "h-4" : "h-0"}`}></div>
+                                                                                                </div>
+                                                                                                <div className='py-2'>
+                                                                                                    <NavLink
+                                                                                                        to="/dashboard/contact-request"
+                                                                                                        className={`hover:text-primary transition-all duration-[.35s] ${showLine3 ? "ml-1" : "-ml-2"} `}
+                                                                                                    >
+                                                                                                        Contact Request
+                                                                                                    </NavLink>
+                                                                                                </div>
+                                                                                            </div>
+
+                                                                                            {/* NavLink 4 */}
+                                                                                            <div
+                                                                                                onMouseEnter={() => setShowLine4(true)}
+                                                                                                onMouseLeave={() => setShowLine4(false)}
+                                                                                                className="flex gap-2 items-center"
+                                                                                            >
+                                                                                                <div>
+                                                                                                    <div className={`w-[2px] bg-primary transition-all duration-[.35s] ${showLine4 ? "h-4" : "h-0"}`}></div>
+                                                                                                </div>
+                                                                                                <div className='py-2'>
+                                                                                                    <NavLink
+                                                                                                        to="/dashboard/favourites"
+                                                                                                        className={`hover:text-primary transition-all duration-[.35s] ${showLine4 ? "ml-1" : "-ml-2"} `}
+                                                                                                    >
+                                                                                                        Favourites Biodata
+                                                                                                    </NavLink>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                )
+                                                                        }
 
                                                                         {/* NavLink 5 (Logout button) */}
                                                                         <div
@@ -327,8 +412,6 @@ const Navbar = () => {
                                                                     </ul>
 
                                                                 </div>
-
-                                                            }
                                                         </div>
                                                     ) : (
                                                         <div className='flex ml-6 items-center gap-4'>
@@ -429,121 +512,205 @@ const Navbar = () => {
                                                             onMouseLeave={() => setShowSubMenu1(false)}
                                                             className={`absolute rounded-md bg-white dark:bg-[#1B3C44] transition-all  duration-[.35s] font-light left-12 top-[70%] ${showSubMenu1 ? "scale-y-100 -translate-y-[10px] translate-x-[870px]" : "scale-y-0 -translate-y-[120px] translate-x-[870px]"}`}>
 
-                                                            <ul className='w-[210px] px-4 pt-8 pb-4'>
-                                                                {/* NavLink 1 */}
-                                                                <div
-                                                                    onMouseEnter={() => setShowLine(true)}
-                                                                    onMouseLeave={() => setShowLine(false)}
-                                                                    className="flex  gap-2 items-center"
-                                                                >
-                                                                    <div>
-                                                                        <div className={`w-[2px] bg-primary transition-all duration-[.35s] ${showLine ? "h-4" : "h-0"}`}></div>
+                                                                <ul className={`${isAdmin ? "w-[220px]" : "w-[210px]"} px-4 pt-8 pb-4`}>
+                                                                    {/* NavLink 1 */}
+                                                                    <div
+                                                                        onMouseEnter={() => setShowLine(true)}
+                                                                        onMouseLeave={() => setShowLine(false)}
+                                                                        className="flex  gap-2 items-center"
+                                                                    >
+                                                                        <div>
+                                                                            <div className={`w-[2px] bg-primary transition-all duration-[.35s] ${showLine ? "h-4" : "h-0"}`}></div>
+                                                                        </div>
+                                                                        <div className='py-2'>
+                                                                            <NavLink
+                                                                                to={isAdmin ? "/dashboard/admin-home" : "/dashboard/user-home"}
+                                                                                className={`hover:text-primary transition-all duration-[.35s] ${showLine ? "ml-1" : "-ml-2"}`}
+                                                                            >
+                                                                                {
+                                                                                    isAdmin ? "Admin Home" : "User Home"
+                                                                                }
+                                                                            </NavLink>
+                                                                        </div>
                                                                     </div>
-                                                                    <div className='py-2'>
-                                                                        <NavLink
-                                                                            to={isAdmin ? "/dashboard/admin-home" : "/dashboard/user-home"}
-                                                                            className={`hover:text-primary transition-all duration-[.35s] ${showLine ? "ml-1" : "-ml-2"}`}
-                                                                        >
-                                                                            Dashboard
-                                                                        </NavLink>
-                                                                    </div>
-                                                                </div>
 
-                                                                {/* NavLink 2 */}
-                                                                <div
-                                                                    onMouseEnter={() => setShowLine1(true)}
-                                                                    onMouseLeave={() => setShowLine1(false)}
-                                                                    className="flex gap-2 items-center"
-                                                                >
-                                                                    <div>
-                                                                        <div className={`w-[2px] bg-primary transition-all duration-[.35s] ${showLine1 ? "h-4" : "h-0"}`}></div>
-                                                                    </div>
-                                                                    <div className='py-2'>
-                                                                        <NavLink
-                                                                            to="/dashboard/edit-biodata"
-                                                                            className={`hover:text-primary transition-all duration-[.35s] ${showLine1 ? "ml-1" : "-ml-2"} `}
-                                                                        >
-                                                                            Edit Biodata
-                                                                        </NavLink>
-                                                                    </div>
-                                                                </div>
-                                                                {/* NavLink 2 */}
-                                                                <div
-                                                                    onMouseEnter={() => setShowLine2(true)}
-                                                                    onMouseLeave={() => setShowLine2(false)}
-                                                                    className="flex gap-2 items-center"
-                                                                >
-                                                                    <div>
-                                                                        <div className={`w-[2px] bg-primary transition-all duration-[.35s] ${showLine2 ? "h-4" : "h-0"}`}></div>
-                                                                    </div>
-                                                                    <div className='py-2'>
-                                                                        <NavLink
-                                                                            to="/dashboard/view-biodata"
-                                                                            className={`hover:text-primary transition-all duration-[.35s] ${showLine2 ? "ml-1" : "-ml-2"} `}
-                                                                        >
-                                                                            View Biodata
-                                                                        </NavLink>
-                                                                    </div>
-                                                                </div>
+                                                                    {
+                                                                        isAdmin ? (
+                                                                            <div>
+                                                                                {/* NavLink 2 */}
+                                                                                <div
+                                                                                    onMouseEnter={() => setShowLine1(true)}
+                                                                                    onMouseLeave={() => setShowLine1(false)}
+                                                                                    className="flex gap-2 items-center"
+                                                                                >
+                                                                                    <div>
+                                                                                        <div className={`w-[2px] bg-primary transition-all duration-[.35s] ${showLine1 ? "h-4" : "h-0"}`}></div>
+                                                                                    </div>
+                                                                                    <div className='py-2'>
+                                                                                        <NavLink
+                                                                                            to="/dashboard/manage-users"
+                                                                                            className={`hover:text-primary transition-all duration-[.35s] ${showLine1 ? "ml-1" : "-ml-2"} `}
+                                                                                        >
+                                                                                            Manage Users
+                                                                                        </NavLink>
+                                                                                    </div>
+                                                                                </div>
+                                                                                {/* NavLink 2 */}
+                                                                                <div
+                                                                                    onMouseEnter={() => setShowLine2(true)}
+                                                                                    onMouseLeave={() => setShowLine2(false)}
+                                                                                    className="flex gap-2 items-center"
+                                                                                >
+                                                                                    <div>
+                                                                                        <div className={`w-[2px] bg-primary transition-all duration-[.35s] ${showLine2 ? "h-4" : "h-0"}`}></div>
+                                                                                    </div>
+                                                                                    <div className='py-2'>
+                                                                                        <NavLink
+                                                                                            to="/dashboard/approved-premium"
+                                                                                            className={`hover:text-primary transition-all duration-[.35s] ${showLine2 ? "ml-1" : "-ml-2"} `}
+                                                                                        >
+                                                                                            Approve Premium
+                                                                                        </NavLink>
+                                                                                    </div>
+                                                                                </div>
 
-                                                                {/* NavLink 3 */}
-                                                                <div
-                                                                    onMouseEnter={() => setShowLine3(true)}
-                                                                    onMouseLeave={() => setShowLine3(false)}
-                                                                    className="flex gap-2 items-center"
-                                                                >
-                                                                    <div>
-                                                                        <div className={`w-[2px] bg-primary transition-all duration-[.35s] ${showLine3 ? "h-4" : "h-0"}`}></div>
-                                                                    </div>
-                                                                    <div className='py-2'>
-                                                                        <NavLink
-                                                                            to="/dashboard/contact-request"
-                                                                            className={`hover:text-primary transition-all duration-[.35s] ${showLine3 ? "ml-1" : "-ml-2"} `}
-                                                                        >
-                                                                            Contact Request
-                                                                        </NavLink>
-                                                                    </div>
-                                                                </div>
+                                                                                {/* NavLink 3 */}
+                                                                                <div
+                                                                                    onMouseEnter={() => setShowLine3(true)}
+                                                                                    onMouseLeave={() => setShowLine3(false)}
+                                                                                    className="flex gap-2 items-center"
+                                                                                >
+                                                                                    <div>
+                                                                                        <div className={`w-[2px] bg-primary transition-all duration-[.35s] ${showLine3 ? "h-4" : "h-0"}`}></div>
+                                                                                    </div>
+                                                                                    <div className='py-2'>
+                                                                                        <NavLink
+                                                                                            to="/dashboard/approved-contact-request"
+                                                                                            className={`hover:text-primary transition-all duration-[.35s] ${showLine3 ? "ml-1" : "-ml-2"} `}
+                                                                                        >
+                                                                                            Approve Contact Req..
+                                                                                        </NavLink>
+                                                                                    </div>
+                                                                                </div>
 
-                                                                {/* NavLink 4 */}
-                                                                <div
-                                                                    onMouseEnter={() => setShowLine4(true)}
-                                                                    onMouseLeave={() => setShowLine4(false)}
-                                                                    className="flex gap-2 items-center"
-                                                                >
-                                                                    <div>
-                                                                        <div className={`w-[2px] bg-primary transition-all duration-[.35s] ${showLine4 ? "h-4" : "h-0"}`}></div>
-                                                                    </div>
-                                                                    <div className='py-2'>
-                                                                        <NavLink
-                                                                            to="/dashboard/favourites"
-                                                                            className={`hover:text-primary transition-all duration-[.35s] ${showLine4 ? "ml-1" : "-ml-2"} `}
-                                                                        >
-                                                                            Favourites Biodata
-                                                                        </NavLink>
-                                                                    </div>
-                                                                </div>
+                                                                                {/* NavLink 4 */}
+                                                                                <div
+                                                                                    onMouseEnter={() => setShowLine4(true)}
+                                                                                    onMouseLeave={() => setShowLine4(false)}
+                                                                                    className="flex gap-2 items-center"
+                                                                                >
+                                                                                    <div>
+                                                                                        <div className={`w-[2px] bg-primary transition-all duration-[.35s] ${showLine4 ? "h-4" : "h-0"}`}></div>
+                                                                                    </div>
+                                                                                    <div className='py-2'>
+                                                                                        <NavLink
+                                                                                            to="/dashboard/success-story"
+                                                                                            className={`hover:text-primary transition-all duration-[.35s] ${showLine4 ? "ml-1" : "-ml-2"} `}
+                                                                                        >
+                                                                                            Success Stories
+                                                                                        </NavLink>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        ) : (
+                                                                            <div>
+                                                                                {/* NavLink 2 */}
+                                                                                <div
+                                                                                    onMouseEnter={() => setShowLine1(true)}
+                                                                                    onMouseLeave={() => setShowLine1(false)}
+                                                                                    className="flex gap-2 items-center"
+                                                                                >
+                                                                                    <div>
+                                                                                        <div className={`w-[2px] bg-primary transition-all duration-[.35s] ${showLine1 ? "h-4" : "h-0"}`}></div>
+                                                                                    </div>
+                                                                                    <div className='py-2'>
+                                                                                        <NavLink
+                                                                                            to="/dashboard/edit-biodata"
+                                                                                            className={`hover:text-primary transition-all duration-[.35s] ${showLine1 ? "ml-1" : "-ml-2"} `}
+                                                                                        >
+                                                                                            Edit Biodata
+                                                                                        </NavLink>
+                                                                                    </div>
+                                                                                </div>
+                                                                                {/* NavLink 2 */}
+                                                                                <div
+                                                                                    onMouseEnter={() => setShowLine2(true)}
+                                                                                    onMouseLeave={() => setShowLine2(false)}
+                                                                                    className="flex gap-2 items-center"
+                                                                                >
+                                                                                    <div>
+                                                                                        <div className={`w-[2px] bg-primary transition-all duration-[.35s] ${showLine2 ? "h-4" : "h-0"}`}></div>
+                                                                                    </div>
+                                                                                    <div className='py-2'>
+                                                                                        <NavLink
+                                                                                            to="/dashboard/view-biodata"
+                                                                                            className={`hover:text-primary transition-all duration-[.35s] ${showLine2 ? "ml-1" : "-ml-2"} `}
+                                                                                        >
+                                                                                            View Biodata
+                                                                                        </NavLink>
+                                                                                    </div>
+                                                                                </div>
 
-                                                                {/* NavLink 5 (Logout button) */}
-                                                                <div
-                                                                    onMouseEnter={() => setShowLine5(true)}
-                                                                    onMouseLeave={() => setShowLine5(false)}
-                                                                    className="flex gap-2 items-center"
-                                                                >
-                                                                    <div>
-                                                                        <div className={`w-[2px] bg-primary transition-all duration-[.35s] ${showLine5 ? "h-4" : "h-0"}`}></div>
-                                                                    </div>
-                                                                    <div className='py-2'>
-                                                                        <button
-                                                                            onClick={handleLogout}
-                                                                            className={`hover:text-primary transition-all duration-[.35s] ${showLine5 ? "ml-1" : "-ml-2"}`}
-                                                                        >
-                                                                            Logout
-                                                                        </button>
-                                                                    </div>
-                                                                </div>
-                                                            </ul>
+                                                                                {/* NavLink 3 */}
+                                                                                <div
+                                                                                    onMouseEnter={() => setShowLine3(true)}
+                                                                                    onMouseLeave={() => setShowLine3(false)}
+                                                                                    className="flex gap-2 items-center"
+                                                                                >
+                                                                                    <div>
+                                                                                        <div className={`w-[2px] bg-primary transition-all duration-[.35s] ${showLine3 ? "h-4" : "h-0"}`}></div>
+                                                                                    </div>
+                                                                                    <div className='py-2'>
+                                                                                        <NavLink
+                                                                                            to="/dashboard/contact-request"
+                                                                                            className={`hover:text-primary transition-all duration-[.35s] ${showLine3 ? "ml-1" : "-ml-2"} `}
+                                                                                        >
+                                                                                            Contact Request
+                                                                                        </NavLink>
+                                                                                    </div>
+                                                                                </div>
 
+                                                                                {/* NavLink 4 */}
+                                                                                <div
+                                                                                    onMouseEnter={() => setShowLine4(true)}
+                                                                                    onMouseLeave={() => setShowLine4(false)}
+                                                                                    className="flex gap-2 items-center"
+                                                                                >
+                                                                                    <div>
+                                                                                        <div className={`w-[2px] bg-primary transition-all duration-[.35s] ${showLine4 ? "h-4" : "h-0"}`}></div>
+                                                                                    </div>
+                                                                                    <div className='py-2'>
+                                                                                        <NavLink
+                                                                                            to="/dashboard/favourites"
+                                                                                            className={`hover:text-primary transition-all duration-[.35s] ${showLine4 ? "ml-1" : "-ml-2"} `}
+                                                                                        >
+                                                                                            Favourites Biodata
+                                                                                        </NavLink>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        )
+                                                                    }
+
+                                                                    {/* NavLink 5 (Logout button) */}
+                                                                    <div
+                                                                        onMouseEnter={() => setShowLine5(true)}
+                                                                        onMouseLeave={() => setShowLine5(false)}
+                                                                        className="flex gap-2 items-center"
+                                                                    >
+                                                                        <div>
+                                                                            <div className={`w-[2px] bg-primary transition-all duration-[.35s] ${showLine5 ? "h-4" : "h-0"}`}></div>
+                                                                        </div>
+                                                                        <div className='py-2'>
+                                                                            <button
+                                                                                onClick={handleLogout}
+                                                                                className={`hover:text-primary transition-all duration-[.35s] ${showLine5 ? "ml-1" : "-ml-2"}`}
+                                                                            >
+                                                                                Logout
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
+                                                                </ul>
                                                         </div>
 
                                                     }
@@ -668,7 +835,6 @@ const Navbar = () => {
                         className={`fixed lg:hidden top-0 left-0 z-[11]  bg-white dark:bg-[#1B3C44] p-6 h-full lg:w-[250px] w-[75%] max-w-[300px] space-y-3 rounded-xl transform transition-transform duration-[.5s] ease-in-out ${menuVisible ? "translate-x-0" : "-translate-x-full"
                             }`}
                     >
-                        
                         <div className="mt-12 justify-between items-center">
                             <h1 className='text-xl capitalize pl-6 pb-4 '>Hi, Welcome {user?.displayName} !</h1>
                             <div className="px-6 ">
@@ -709,7 +875,7 @@ const Navbar = () => {
                                     <div>
                                         <IoShieldCheckmarkOutline />
                                     </div>
-                                    Approved Premium
+                                    Approve Premium
                                 </NavLink>
                                 <NavLink onClick={() => { setMenuVisible(!menuVisible), setShowNavbar(true) }}
                                     to="/dashboard/contact-request"
@@ -718,7 +884,7 @@ const Navbar = () => {
                                     <div>
                                         <MdMarkEmailRead />
                                     </div>
-                                    Approved Contact Req..
+                                    Approve Contact Req..
                                 </NavLink>
                                 <button
                                     onClick={() => {

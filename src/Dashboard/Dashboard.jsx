@@ -83,7 +83,7 @@ const Dashboard = () => {
                                     <div>
                                         <IoShieldCheckmarkOutline />
                                     </div>
-                                    Approved Premium
+                                    Approve Premium
                                 </NavLink>
                                 <NavLink 
                                     to="/dashboard/approved-contact-request"
@@ -92,7 +92,7 @@ const Dashboard = () => {
                                     <div>
                                         <MdMarkEmailRead />
                                     </div>
-                                    Approved Contact Req..
+                                    Approve Contact Req..
                                 </NavLink>
                                 <NavLink 
                                     to="/dashboard/success-story"

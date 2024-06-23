@@ -158,7 +158,7 @@ const ViewDetails = () => {
         ],
     };
 
-
+console.log(isLoadingUser);
     const handleAddToFavorites = (bioDataId) => {
         console.log("clicked")
         addToFavorites(bioDataId);
@@ -216,30 +216,36 @@ const ViewDetails = () => {
                     <div className='mt-12 flex gap-8 dark:text-heading2'>
                         <div>
                             <h2 className='text-2xl font-semibold'>Contact Info</h2>
-                            <div className='flex items-center gap-3  mt-6'>
-                                <p className='p-2 border rounded-md'><CiMobile3 /></p>
-                                <p>Phone :
-                                    {
-                                        userInfo?.tire === "premium" ? (
-                                            <span className='font-light dark:text-Description2'> {data.mobile_number}</span>
-                                        ) : (
-                                            <span className='font-light dark:text-Description2'> *********</span>
-                                        )
-                                    }
-                                </p>
-                            </div>
-                            <div className='flex items-center gap-3 mt-3'>
-                                <p className='p-2 border opacity-70 rounded-md'><MdOutlineMarkEmailRead /></p>
-                                <p>Email :
-                                    {
-                                        userInfo.tire === "premium" ? (
-                                            <span className='font-light dark:text-Description2'> {data.contact_email}</span>
-                                        ) : (
-                                            <span className='font-light dark:text-Description2'> *********</span>
-                                        )
-                                    }
-                                </p>
-                            </div>
+                            {
+                                isLoadingUser ? "" : (
+                                    <div>
+                                        <div className='flex items-center gap-3  mt-6'>
+                                            <p className='p-2 border rounded-md'><CiMobile3 /></p>
+                                            <p>Phone :
+                                                {
+                                                    userInfo?.tire === "premium" ? (
+                                                        <span className='font-light dark:text-Description2'> {data.mobile_number}</span>
+                                                    ) : (
+                                                        <span className='font-light dark:text-Description2'> *********</span>
+                                                    )
+                                                }
+                                            </p>
+                                        </div>
+                                        <div className='flex items-center gap-3 mt-3'>
+                                            <p className='p-2 border opacity-70 rounded-md'><MdOutlineMarkEmailRead /></p>
+                                            <p>Email :
+                                                {
+                                                    userInfo.tire === "premium" ? (
+                                                        <span className='font-light dark:text-Description2'> {data.contact_email}</span>
+                                                    ) : (
+                                                        <span className='font-light dark:text-Description2'> *********</span>
+                                                    )
+                                                }
+                                            </p>
+                                        </div>
+                                    </div>
+                                )
+                           }
                         </div>
                         <div>
                             {
