@@ -78,7 +78,7 @@ const ApprovedPremium = () => {
                                     <td className="px-2 sm:px-4 py-4 text-xs  whitespace-nowrap">
                                         <button
                                             onClick={() => handleMakePremium(user.contact_email)}
-                                            className="bg-primary2 hover:bg-primary text-white px-3 py-1 rounded-lg shadow-md"
+                                            className="bg-primary2 hover:bg-primary text-white px-3 py-1 rounded-md shadow-md"
                                         >
                                             Make Premium
                                         </button>

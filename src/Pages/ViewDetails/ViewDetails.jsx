@@ -220,7 +220,7 @@ const ViewDetails = () => {
                                 <p className='p-2 border rounded-md'><CiMobile3 /></p>
                                 <p>Phone :
                                     {
-                                        userInfo.tire === "premium" ? (
+                                        userInfo?.tire === "premium" ? (
                                             <span className='font-light dark:text-Description2'> {data.mobile_number}</span>
                                         ) : (
                                             <span className='font-light dark:text-Description2'> *********</span>
