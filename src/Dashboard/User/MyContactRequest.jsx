@@ -98,8 +98,8 @@ console.log(contacts)
                                     </td>
                                     <td className="px-2 sm:px-4 py-4 text-xs  whitespace-nowrap">{contact.name}</td>
                                     <td className="px-2 sm:px-4 py-4 text-xs  whitespace-nowrap"><span className="bg-secondary dark:bg-[#2d5a47] px-2 rounded-lg">{contact.bioData_id}</span></td>
-                                    <td className="px-2 sm:px-4 py-4 text-xs  whitespace-nowrap">{contact.status === 'approve' ? contact.contact_email : <span className="italic text-gray-600 dark:text-Description2">Hidden</span>}</td>
-                                    <td className="px-2 sm:px-4 py-4 text-xs  whitespace-nowrap">{contact.status === 'approve' ? contact.contact_phone : <span className="italic text-gray-600  dark:text-Description2">Hidden</span>}</td>
+                                    <td className="px-2 sm:px-4 py-4 text-xs  whitespace-nowrap">{contact.status === 'Approved' ? contact.contact_email : <span className="italic text-gray-600 dark:text-Description2">Hidden</span>}</td>
+                                    <td className="px-2 sm:px-4 py-4 text-xs  whitespace-nowrap">{contact.status === 'Approved' ? contact.contact_phone : <span className="italic text-gray-600  dark:text-Description2">Hidden</span>}</td>
                                     <td className="px-2 sm:px-4 py-4 text-xs  whitespace-nowrap">
                                         <span className={contact.status === 'Approved' ? 'bg-[#E3FCEF] text-green-500  dark:bg-[#235353] dark:text-[#dabb94] px-3 py-1 rounded-lg ' : 'text-[#ff922b] dark:bg-[#235353] dark:text-[#dabb94] px-3 py-1 rounded-lg bg-[#FDF1F8]'}>
                                             {contact.status}
