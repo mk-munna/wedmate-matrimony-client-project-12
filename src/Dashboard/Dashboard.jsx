@@ -51,7 +51,7 @@ const Dashboard = () => {
                             <div className="px-6 pt-">
                                 <img
                                     src={user?.photoURL}
-                                    className="w-[160px] h-[100px] object-cover rounded-xl border-4 border-[#ECF0F2] dark:border-[#183235]"
+                                    className="w-[150px] h-[120px] object-cover rounded-xl border-4 border-[#ECF0F2] dark:border-[#183235]"
                                     alt=""
                                 />
                             </div>
