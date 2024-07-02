@@ -35,6 +35,7 @@ const ViewDetails = () => {
 
 
     const { user } = useContext(AuthContext);
+    console.log(user);
     const { id } = useParams();
     const [imgError, setImgError] = useState(false);
 
@@ -62,7 +63,6 @@ const ViewDetails = () => {
         const response = await axiosSecure.get(`/related-biodatas?limit=6&gender=${gender}&excludeid=${excludeId}`);
         return response.data;
     };
-
     const addToFavorites = async (bioDataId) => {
         const response = await axiosSecure.post('/favorites', {
             email: user.email,
@@ -158,7 +158,7 @@ const ViewDetails = () => {
         ],
     };
 
-console.log(isLoadingUser);
+    console.log(isLoadingUser);
     const handleAddToFavorites = (bioDataId) => {
         console.log("clicked")
         addToFavorites(bioDataId);
@@ -213,21 +213,22 @@ console.log(isLoadingUser);
                         <p className='text-xl dark:text-heading2 mt-6'>About</p>
                         <p className='mt-4 text-[16px] font-secondary !leading-[26px] text-Description dark:text-Description2 '>{data.about}</p>
                     </div>
-                    <div className='mt-12 flex gap-8 dark:text-heading2'>
-                        <div>
-                            <h2 className='text-2xl font-semibold'>Contact Info</h2>
-                            {
-                                isLoadingUser ? "" : (
+                    {
+                        isLoadingUser ? "" : (
+                            <div className='mt-12 flex gap-8 dark:text-heading2'>
+                                <div>
+                                    <h2 className='text-2xl font-semibold'>Contact Info</h2>
+
                                     <div>
                                         <div className='flex items-center gap-3  mt-6'>
                                             <p className='p-2 border rounded-md'><CiMobile3 /></p>
                                             <p>Phone :
                                                 {
-                                                    userInfo?.tire === "premium" ? (
+                                                    userInfo.tire ? userInfo?.tire === "premium" && (
                                                         <span className='font-light dark:text-Description2'> {data.mobile_number}</span>
                                                     ) : (
                                                         <span className='font-light dark:text-Description2'> *********</span>
-                                                    )
+                                                    ) 
                                                 }
                                             </p>
                                         </div>
@@ -235,7 +236,7 @@ console.log(isLoadingUser);
                                             <p className='p-2 border opacity-70 rounded-md'><MdOutlineMarkEmailRead /></p>
                                             <p>Email :
                                                 {
-                                                    userInfo.tire === "premium" ? (
+                                                    userInfo.tire ? userInfo.tire === "premium" && (
                                                         <span className='font-light dark:text-Description2'> {data.contact_email}</span>
                                                     ) : (
                                                         <span className='font-light dark:text-Description2'> *********</span>
@@ -244,24 +245,25 @@ console.log(isLoadingUser);
                                             </p>
                                         </div>
                                     </div>
-                                )
-                           }
-                        </div>
-                        <div>
-                            {
-                                userInfo.tire === "premium" ? "" : (
-                                    <div className="">
-                                        <div className=" h-20 md:h-14 dark:text-gray-600 text-sm p-3 rounded-lg max-w-xs chat-bubble">
-                                            Want to view Contact Info?
-                                        </div>
-                                        <div className='flex justify-end mt-6'>
-                                            <Link to={`/dashboard/checkout/:${data.bioData_id}`} className='h-[36px] w-[100px] -mr-2 md:-mr-12 !text-[12px] dynamic-button bg-secondary  text-yellow-600 px-4 duration-700 py-3'><span className='absolute z-10 top-[9px] left-[14px] font-secondary'>Request Info</span></Link>
-                                        </div>
-                                    </div>
-                                )
-                            }
-                        </div>
-                    </div>
+
+                                </div>
+                                <div>
+                                    {
+                                        userInfo.tire ? userInfo.tire === "premium" && "" : (
+                                            <div className="">
+                                                <div className=" h-20 md:h-14 dark:text-gray-600 text-sm p-3 rounded-lg max-w-xs chat-bubble">
+                                                    Want to view Contact Info?
+                                                </div>
+                                                <div className='flex justify-end mt-6'>
+                                                    <Link to={`/dashboard/checkout/:${data.bioData_id}`} className='h-[36px] w-[100px] -mr-2 md:-mr-12 !text-[12px] dynamic-button bg-secondary  text-yellow-600 px-4 duration-700 py-3'><span className='absolute z-10 top-[9px] left-[14px] font-secondary'>Request Info</span></Link>
+                                                </div>
+                                            </div>
+                                        )
+                                    }
+                                </div>
+                            </div>
+                        )
+                    }
                 </div>
             </div>
             <div className='mt-12 flex flex-col lg:flex-row gap-14 lg:gap-32 dark:text-heading2'>
